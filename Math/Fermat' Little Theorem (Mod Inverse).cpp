@@ -21,9 +21,9 @@ ll power(ll x, ll p) {
     }
     return ans;
 }
-// fermat's little theorem
+// fermat's little theorem --> "MOD" MUST be a prime number!!
 ll inv(ll x) {
-    return power(x, MOD - 2);
+    return power(x, MOD - 2); 
 }
 
 void solve() {
