@@ -13,7 +13,7 @@ const int N = 1e5 + 10, OO = 0x3f3f3f3f;
 int n, m, dis[N];
 vector<pii> adj[N];
 
-void dijkstra(int src) {
+void dijkstra(int src) { //O( (V+E)log(V) )
     priority_queue<pii, vector<pii>, greater<>> q;
     memset(dis, OO, n * sizeof dis[0]);
     dis[src] = 0;
