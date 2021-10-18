@@ -45,7 +45,7 @@ void join(int u, int v) {
     sz[v] += sz[u];
 }
 
-ll kruskal() {
+ll kruskal() { // O(M*log(N))
     ll total = 0;
     for (int i = 0; i < m; ++i) {
         int idx = sorted[i];
