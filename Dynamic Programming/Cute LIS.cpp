@@ -10,9 +10,8 @@ const int N = 1e5 + 10, OO = 0x3f3f3f3f;
 int a[N]; // array of numbers given in input
 int n; // number of elements in input
 
-// finding the longest increasing (without duplicate) subsequence length
 
-//style 1:
+//style 1: // finding the longest increasing(LIS is distinct) subsequence length.(without duplicates in input array)
 int LIS1() {
 	set < int > st;
 	for (int i = 0; i < n; ++i) {
@@ -23,7 +22,7 @@ int LIS1() {
 	}
 	return (int)st.size();
 }
-// style 2:
+// style 2: // finding the longest increasing(LIS is distinct) subsequence length.(with duplicates in input array)
 int LIS2() {
 	multiset < int > st;
 	for (int i = 0 ; i < n ; ++i) {
@@ -36,7 +35,7 @@ int LIS2() {
 	return (int)st.size();
 }
 
-// finding the longest nondecreasing (with duplicates) subsequence length
+// finding the longest nondecreasing (LIS can contains equal elements) subsequence length. (with duplicates in input array)
 int LNDS() {
 	multiset < int > st;
 	for (int i = 0 ; i < n ; ++i) {
