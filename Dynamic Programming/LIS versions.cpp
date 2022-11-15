@@ -80,7 +80,8 @@ int lis2(vector < int > &v){
 }
 
 // ###########################################
-// find count number of longest increasing subs
+// Count number of longest increasing subs
+// The number of ways to form a longest increasing subsequences ending in a[i] is the sum of all ways for all longest increasing subsequences ending in  j where  dp[j] is maximal. There can be multiple such  j, so we need to sum all of them.
 
 int count_LIS(vector < int > &v){
 	int n = (int)v.size();
